@@ -9,7 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
 		<link rel="stylesheet" type="text/css" href="css/dahua.css" />
 	</head>
-
 	<body>
 		<div class="big">
 			<div class="header">
@@ -56,14 +55,30 @@
 				</div>
 			</div>
 			<!--头部结束-->
+			<script type="text/javascript">
+				$(function(){
+					var now=0
+					var toptimer=null
+					function topmove(){
+						if(now<1){
+						now++
+					$("#top-right-ul").css("top",-now*($("#top-right-ul li").height()))
+					}else{
+						now=0
+						$("#top-right-ul").css("top",-now*($("#top-right-ul li").height()))
+					}
+					}
+					toptimer=setInterval(topmove, 4000)
+				})
+			</script>
 			<!--导航开始-->
 			<div class="big-nav">
 				<div class="container">
 					<a href="javascript:;" class="nav-logo">
-						<!--<img src="img/200.webp"/>-->
+						
 					</a>
 					<div class="nav-box">
-						<a>官网首页
+						<a class="current">官网首页
 						</a>
 						<a>游戏特色
 						</a>
@@ -106,11 +121,18 @@
 				<a href="javascript:;" class="ban-btn-left"></a>
 				<a href="javascript:;" class="ban-btn-right"></a>
 			</div>
-			<!--<script type="text/javascript">
+			<script type="text/javascript">
 				$(function(){
-					$(".banner-wrap a")
+					var bannow=0;
+					var bantimer=null;
+					function banmove() {
+						
+					}
+                   $(".ban-btn-left").click(){
+                   	  $("")
+                   }
 				})
-			</script>-->
+			</script>
 			<!--banner图结束-->
 			<div class="warp">
 				<div class="pc-content">
@@ -292,9 +314,100 @@
                     <div class="con-box3">
                     	<div class="news2-box">
                     		<div class="news-nav">
-                    			
+                    			<a href="javascript:;">推荐</a>
+                    			<a href="javascript:;">无差别PK</a>
+                    			<a href="javascript:;">口袋版</a>
+                    			<a href="javascript:;">回顾</a>
+                    			<a href="javascript:;">玩家</a>
+                    		</div>
+                    		<div class="slider">
+                    			<div class="news-items">
+                    				<ul class="items-list">
+                    				
+                    					<li><a href="javascript:;">
+                    						<span>[牛人逸事]</span>
+                    						十万元赞助！全服第一人气大帮线下聚会
+                    						<span class="time">[11-18]</span>
+                    					</a></li>
+                    					<li><a href="javascript:;">
+                    						<span>[热门话题]</span>
+                    						一炮秒出两只黄金兽！这结局竟然这么皮
+                    						<span class="time">[11-18]</span>
+                    					</a></li>
+                    					<li><a href="javascript:;">
+                    						<span>[热门话题]</span>
+                    						龙君名字亮了！就问对面有没有感到意外
+                    						<span class="time">[11-18]</span>
+                    					</a></li>
+                    					<li><a href="javascript:;">
+                    						<span>[牛人逸事]</span>
+                    						第一敏魔最新属性！神马？这还不是极限
+                    						<span class="time">[11-18]</span>
+                    					</a></li>
+                    					<li><a href="javascript:;">
+                    						<span>[囧囧有神]</span>
+                    						跨服又见三终极冰雪魔！现在变什么样了
+                    						<span class="time">[11-18]</span>
+                    					</a></li>
+                    					<li><a href="javascript:;">
+                    						<span>[牛人逸事]</span>
+                    						 晒一下大力鬼装备！十五级发光武器牛掰
+                    						<span class="time">[11-18]</span>
+                    					</a></li>
+                    					<li><a href="javascript:;">
+                    						<span>[热门话题]</span>
+                    						不喜欢PK很多年 帮战出于无奈打了两场
+                    						<span class="time">[11-18]</span>
+                    					</a></li>
+                    				</ul>
+                    			</div>
                     		</div>
                     	</div>
+                        <div class="bwdh">
+                           <a href="javascript:;" class="bwdh-img1">
+                           	<i>比武大会</i>
+                           </a>  
+                           <a href="javascript:;" class="bwdh-img1 bwdh-img2">
+                           	<i>天梯巅峰</i>
+                           </a>
+                           <a href="javascript:;" class="bwdh-img1 bwdh-img3">
+                           	<i>无差别pk</i>
+                           </a>
+                           <a href="javascript:;" class="bwdh-txt">
+                           	<p>
+                           		<em>【第65届】比武战报及录像：恭喜山西新区夺冠！</em>
+                           		<span>第65届天下第一比武大会甲级冠军山西新区、乙级冠军太初幻境、丙级冠军缘定三生、丁级冠军仙履奇缘！</span>
+                           	</p>
+                           </a>
+                        </div>
+                         <!--比武大会结束-->
+                         <div class="entry-box">
+                         	<a href="javascript:;" class="entry-btn1">
+                         		<i class="md"></i>
+                         		日历
+                         	</a>
+                         	<a href="javascript:;" class="entry-btn2">
+                         		<i class="md"></i>
+                         		客服
+                         	</a>
+                         	<a href="javascript:;" class="entry-btn3">
+                         		<i class="md"></i>
+                         		工具
+                         	</a>
+                         	<a href="javascript:;" class="entry-btn4">
+                         		<i class="md"></i>
+                         		排行
+                         	</a>
+                         	<a href="javascript:;" class="entry-btn5">
+                         		<i class="md"></i>
+                         		套装
+                         	</a>
+                         	<a href="javascript:;"style="width: 90px;" class="entry-btn6">
+                         		<i class="md"></i>
+                         		养育
+                         	</a>
+                         	
+                         </div>
                     </div>
 				</div>
 			</div>
